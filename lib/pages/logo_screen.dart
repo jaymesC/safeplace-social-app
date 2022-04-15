@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 
 class LogoScreen extends StatelessWidget {
-  const LogoScreen({ Key? key }) : super(key: key);
+  const LogoScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      background:
+      backgroundColor: Colors.white,
       body: Center(
-        child: const Text('SAFEPLACE', style: TextStyle(fontSize: 24))
-      ),
+          child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                    Colors.blue,
+                    Colors.red,
+                  ])),
+              child: Center(
+                  child: const Text('SAFEPLACE',
+                      style: TextStyle(fontSize: 32, color: Colors.white))))),
     );
   }
 }
