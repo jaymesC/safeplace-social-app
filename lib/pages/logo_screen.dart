@@ -14,12 +14,14 @@ class LogoScreen extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                    Colors.blue,
-                    Colors.red,
+                    Colors.deepPurpleAccent.shade700,
+                    Colors.deepPurple,
                   ])),
               child: Center(
                   child: const Text('SAFEPLACE',
-                      style: TextStyle(fontSize: 32, color: Colors.white))))),
+                      style: TextStyle(fontSize: 32, color: Colors.white)),
+                      
+                      ))),
     );
   }
 }
