@@ -18,10 +18,20 @@ class LogoScreen extends StatelessWidget {
                     Colors.deepPurple,
                   ])),
               child: Center(
-                  child: const Text('SAFEPLACE',
-                      style: TextStyle(fontSize: 32, color: Colors.white)),
-                      
-                      ))),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text('SAFEPLACE',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2,
+                        )),
+                    Image.asset('images/logo.png')
+                  ],
+                ),
+              ))),
     );
   }
 }
