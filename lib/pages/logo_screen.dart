@@ -28,7 +28,11 @@ class LogoScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           letterSpacing: 2,
                         )),
-                    Image.asset('images/logo.png')
+                    Image.asset('images/logo.png'),
+                    SizedBox(height: 10),
+                    CircularProgressIndicator(
+                      color: Colors.white,
+                    )
                   ],
                 ),
               ))),
