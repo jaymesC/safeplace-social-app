@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LogoScreen extends StatelessWidget {
   const LogoScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    const spinkit = SpinKitFoldingCube(
+      color: Colors.white,
+      size: 50.0,
+    );
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -28,11 +33,10 @@ class LogoScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           letterSpacing: 2,
                         )),
+                    SizedBox(height: 5),
                     Image.asset('images/logo.png'),
                     SizedBox(height: 10),
-                    CircularProgressIndicator(
-                      color: Colors.white,
-                    )
+                    spinkit
                   ],
                 ),
               ))),
