@@ -13,7 +13,8 @@ class _MainPageState extends State<MainPage> {
     return const Scaffold(
       body: Center(
         child: Text('Main Page')
-      )
+      ),
+      bottomNavigationBar: BottomNavigationBar(),
     );
   }
 }
