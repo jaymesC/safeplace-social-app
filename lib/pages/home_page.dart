@@ -19,6 +19,16 @@ class HomePage extends StatelessWidget {
   }
 
   _headSection() {
+    var list = [
+      '😎',
+      '😎',
+      '😎',
+      '😎',
+      '😎',
+      '😎',
+    ];
+    var feeling = ['Happy', 'Calm', 'Sad', 'Energetic', 'Anxious', 'Frisky'];
+
     return Container(
       padding: const EdgeInsets.only(top: 50, left: 30),
       height: 250,
@@ -69,11 +79,20 @@ class HomePage extends StatelessWidget {
             height: 20,
           ),
           Row(
+            children: <Widget>[
+              for (var item in list)
+                EmojiWidget(
+                  emoji: item,
+                  // label: 'happy',
+                )
+            ],
+          ),
+          Row(
             children: [
-              EmojiWidget(
-                emoji: ' 😎 ',
-                label: 'happy',
-              )
+              for (var item in feeling)
+                Container(
+                    margin: EdgeInsets.only(left: 10, right: 12),
+                    child: Text(item, style: TextStyle(color: Colors.white)))
             ],
           )
         ],
