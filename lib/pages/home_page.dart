@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safeplace_app/widgets/emoji_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -60,6 +61,12 @@ class HomePage extends StatelessWidget {
               Text('How do you feel?',
                   style: TextStyle(color: Colors.white, fontSize: 16)),
             ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [EmojiWidget(emoji: 'emoji')],
           )
         ],
       ),
