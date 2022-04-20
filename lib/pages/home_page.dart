@@ -19,10 +19,20 @@ class HomePage extends StatelessWidget {
 
   _headSection() {
     return Container(
+      padding: const EdgeInsets.only(top: 50, left: 10),
       height: 250,
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 67, 14, 182),
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60))),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.menu, color: Colors.white, size: 35),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
