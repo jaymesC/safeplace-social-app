@@ -27,21 +27,27 @@ class HomePage extends StatelessWidget {
       child: Column(
         children: [
           Row(
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(Icons.menu, color: Colors.white, size: 35),
-              Column(children: [
-                Text(
-                  'SAFEPLACE',
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+              Expanded(
+                child: Center(
+                  child: Column(children: [
+                    Text(
+                      'SAFEPLACE',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Image.asset(
+                      'images/logo.png',
+                      height: 30,
+                    )
+                  ]),
                 ),
-                Image.asset(
-                  'images/logo.png',
-                  height: 30,
-                )
-              ])
+              )
             ],
           ),
         ],
