@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
     return Container(
       height: 250,
       decoration: BoxDecoration(
-          color: Colors.black,
+          color: Color.fromARGB(255, 67, 14, 182),
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60))),
     );
   }
