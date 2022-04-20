@@ -5,9 +5,24 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
+
     return Scaffold(
         body: Container(
-      decoration: BoxDecoration(color: Colors.red),
+      height: h,
+      child: Stack(
+        children: [_headSection()],
+      ),
     ));
+  }
+
+  _headSection() {
+    return Container(
+      height: 250,
+      decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60))),
+    );
   }
 }
