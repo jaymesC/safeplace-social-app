@@ -19,9 +19,9 @@ class _MainPageState extends State<MainPage> {
     MessagePage(),
     MusicPage(),
     MyPage()
-    ];
+  ];
 
-    int currentIndex = 0;
+  int currentIndex = 0;
 
   void onTap(int index) {
     setState(() {
@@ -29,30 +29,31 @@ class _MainPageState extends State<MainPage> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        onTap: onTap,
-        currentIndex:currentIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedItemColor: Colors.deepPurple.withOpacity(0.8),
-        elevation: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
-          BottomNavigationBarItem(icon: Icon(Icons.people_outline_outlined)),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
-          BottomNavigationBarItem(icon: Icon(Icons.home_filled)),
-        ],
-
-
-
-      ),
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          onTap: onTap,
+          currentIndex: currentIndex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: Colors.deepPurple.withOpacity(0.8),
+          unselectedItemColor: Colors.grey.withOpacity(0.9),
+          elevation: 0,
+          items: const [
+            BottomNavigationBarItem(
+                label: 'Home', icon: Icon(Icons.home_filled)),
+            BottomNavigationBarItem(
+                label: 'Add friends', icon: Icon(Icons.people)),
+            BottomNavigationBarItem(
+                label: 'Messages', icon: Icon(Icons.message_sharp)),
+            BottomNavigationBarItem(
+                label: 'Music', icon: Icon(Icons.music_note_sharp)),
+            BottomNavigationBarItem(label: 'Profile', icon: Icon(Icons.person)),
+          ]),
     );
   }
 }
