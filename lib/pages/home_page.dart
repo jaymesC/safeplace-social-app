@@ -26,30 +26,41 @@ class HomePage extends StatelessWidget {
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60))),
       child: Column(
         children: [
-          Row(
+          Stack(
             // crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(Icons.menu, color: Colors.white, size: 35),
-              Expanded(
-                child: Center(
-                  child: Column(children: [
-                    Text(
+              Icon(Icons.menu, color: Colors.white, size: 30),
+              Center(
+                child: Column(children: [
+                  Positioned(
+                    right: 0,
+                    child: Text(
                       'SAFEPLACE',
                       style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    Image.asset(
-                      'images/logo.png',
-                      height: 30,
-                    )
-                  ]),
-                ),
-              )
+                  ),
+                  Image.asset(
+                    'images/logo.png',
+                    height: 30,
+                  )
+                ]),
+              ),
             ],
           ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text('How do you feel?',
+                  style: TextStyle(color: Colors.white, fontSize: 16)),
+            ],
+          )
         ],
       ),
     );
