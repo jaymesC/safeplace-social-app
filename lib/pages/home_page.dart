@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
 
   _headSection() {
     return Container(
-      padding: const EdgeInsets.only(top: 50, left: 10),
+      padding: const EdgeInsets.only(top: 50, left: 30),
       height: 250,
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 67, 14, 182),
@@ -59,14 +59,22 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text('How do you feel?',
-                  style: TextStyle(color: Colors.white, fontSize: 16)),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold)),
             ],
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
-            children: [EmojiWidget(emoji: 'emoji')],
+            children: [
+              EmojiWidget(
+                emoji: ' 😎 ',
+                label: 'happy',
+              )
+            ],
           )
         ],
       ),
