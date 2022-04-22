@@ -79,36 +79,41 @@ class HomePage extends StatelessWidget {
             height: 20,
           ),
           Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: <Widget>[
                   for (var item in list)
                     EmojiWidget(
                       emoji: item,
-                      // label: feeling,
+                      // label: 'feeling',
                     ),
                 ],
               ),
-              Row(
-                children: [
-                  for (var item in feeling)
-                    Container(
-                        margin: EdgeInsets.only(right: 22),
-                        child:
-                            Text(item, style: TextStyle(color: Colors.white)))
-                ],
-              )
+              // Row(
+              //   //
+              //   children: [
+              //     for (var item in feeling)
+              //       Container(
+              //           margin: EdgeInsets.only(right: 22),
+              //           child:
+              //               Text(item, style: TextStyle(color: Colors.white)))
+              //   ],
+              // )
             ],
           ),
-          // Row(
-          //   children: [
-          //     for (var item in feeling)
-          //       Container(
-          //           margin: EdgeInsets.only(),
-          //           child: Text(item, style: TextStyle(color: Colors.white)))
-          //   ],
-          // )
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              for (var item in feeling)
+                Container(
+                    padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    margin: EdgeInsets.only(right: 23),
+                    child: Text(item,
+                        style: TextStyle(color: Colors.white, fontSize: 12)))
+            ],
+          )
         ],
       ),
     );

@@ -4,15 +4,13 @@ class EmojiWidget extends StatelessWidget {
   final String emoji;
   // final String label;
 
-  const EmojiWidget({
-    Key? key,
-    required this.emoji,
-  }) : super(key: key);
+  const EmojiWidget({Key? key, required this.emoji, })
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           padding: EdgeInsets.fromLTRB(8, 10, 8, 10),
@@ -29,7 +27,8 @@ class EmojiWidget extends StatelessWidget {
         SizedBox(
           height: 5,
         ),
-        // Text(label, style: TextStyle(color: Colors.white, fontSize: 13))
+        // Text(label,
+        //     style: TextStyle(color: Colors.white, fontSize: 13))
       ],
     );
   }
