@@ -44,8 +44,8 @@ class HomePage extends StatelessWidget {
               Icon(Icons.menu, color: Colors.white, size: 30),
               Center(
                 child: Column(children: [
-                  Positioned(
-                    right: 0,
+                  SizedBox(
+                    // right: 0,
                     child: Text(
                       'SAFEPLACE',
                       style: TextStyle(
@@ -78,23 +78,37 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Row(
-            children: <Widget>[
-              for (var item in list)
-                EmojiWidget(
-                  emoji: item,
-                  // label: 'happy',
-                )
+          Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: <Widget>[
+                  for (var item in list)
+                    EmojiWidget(
+                      emoji: item,
+                      // label: feeling,
+                    ),
+                ],
+              ),
+              Row(
+                children: [
+                  for (var item in feeling)
+                    Container(
+                        margin: EdgeInsets.only(right: 22),
+                        child:
+                            Text(item, style: TextStyle(color: Colors.white)))
+                ],
+              )
             ],
           ),
-          Row(
-            children: [
-              for (var item in feeling)
-                Container(
-                    margin: EdgeInsets.only(left: 10, right: 12),
-                    child: Text(item, style: TextStyle(color: Colors.white)))
-            ],
-          )
+          // Row(
+          //   children: [
+          //     for (var item in feeling)
+          //       Container(
+          //           margin: EdgeInsets.only(),
+          //           child: Text(item, style: TextStyle(color: Colors.white)))
+          //   ],
+          // )
         ],
       ),
     );
