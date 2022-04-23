@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safeplace_app/widgets/emoji_widget.dart';
+import 'package:safeplace_app/widgets/feature_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,7 +14,10 @@ class HomePage extends StatelessWidget {
         body: Container(
       height: h,
       child: Stack(
-        children: [_headSection(), _featureSection()],
+        children: [
+          _headSection(),
+         _featureSection()
+         ],
       ),
     ));
   }
@@ -120,9 +124,9 @@ class HomePage extends StatelessWidget {
   }
 
   _featureSection() {
-    return Positioned(
-      bottom: 2,
-      child: Container(),
+    return Container(
+      height: 200,
+      child: FeatureCard(),
     );
   }
 }
