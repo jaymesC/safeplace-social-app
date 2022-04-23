@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         body: Container(
       height: h,
       child: Stack(
-        children: [_headSection()],
+        children: [_headSection(), _featureSection()],
       ),
     ));
   }
@@ -116,6 +116,13 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  _featureSection() {
+    return Positioned(
+      bottom: 2,
+      child: Container(),
     );
   }
 }
