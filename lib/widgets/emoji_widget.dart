@@ -27,8 +27,6 @@ class EmojiWidget extends StatelessWidget {
         SizedBox(
           height: 5,
         ),
-        // Text(label,
-        //     style: TextStyle(color: Colors.white, fontSize: 13))
       ],
     );
   }

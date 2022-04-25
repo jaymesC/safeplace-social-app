@@ -8,6 +8,7 @@ class FeatureCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       decoration: BoxDecoration(color: Colors.blue),
+      child: Text('data'),
     );
   }
 }

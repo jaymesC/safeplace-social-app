@@ -41,8 +41,6 @@ class HomePage extends StatelessWidget {
           Column(
             children: [
               Stack(
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(Icons.menu, color: Colors.white, size: 30),
                   Center(
@@ -82,28 +80,15 @@ class HomePage extends StatelessWidget {
                 height: 20,
               ),
               Column(
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Row(
                     children: <Widget>[
                       for (var item in list)
                         EmojiWidget(
                           emoji: item,
-                          // label: 'feeling',
                         ),
                     ],
                   ),
-                  // Row(
-                  //   //
-                  //   children: [
-                  //     for (var item in feeling)
-                  //       Container(
-                  //           margin: EdgeInsets.only(right: 22),
-                  //           child:
-                  //               Text(item, style: TextStyle(color: Colors.white)))
-                  //   ],
-                  // )
                 ],
               ),
               Row(
