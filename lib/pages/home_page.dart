@@ -112,13 +112,39 @@ class HomePage extends StatelessWidget {
 
   _featureSection() {
     return Container(
+      padding: const EdgeInsets.only(left: 35, top: 10),
       height: 200,
-      decoration: BoxDecoration(color: Colors.red),
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          FeatureCard(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Features for you',
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.7))),
+              SizedBox(height: 10),
+              FeatureCard(),
+              SizedBox(height: 10),
+              Text('Peer Meetups',
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.5))),
+              SizedBox(height: 5),
+              Text('Join and grow in a community',
+                  style: TextStyle(
+                      fontSize: 12,
+                      // fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.6))),
+            ],
+          ),
         ],
       ),
     );
