@@ -114,7 +114,13 @@ class HomePage extends StatelessWidget {
     return Container(
       height: 200,
       decoration: BoxDecoration(color: Colors.red),
-      child: FeatureCard(),
+      child: Row(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FeatureCard(),
+        ],
+      ),
     );
   }
 }
