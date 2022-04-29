@@ -122,50 +122,55 @@ class HomePage extends StatelessWidget {
       'Listen to calm & soothen songs'
     ];
 
-    ListView.builder(
-        padding: const EdgeInsets.only(left: 35, top: 10),
-        itemCount: 3,
-        itemBuilder: (BuildContext context, int index) {
-          return Container(
-            height: 200,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Features for you',
-                        style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black.withOpacity(0.7))),
-                    SizedBox(height: 10),
-                    FeatureCard(),
-                    SizedBox(height: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(features[index],
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black.withOpacity(0.5))),
-                        SizedBox(height: 5),
-                        Text(text[index],
-                            style: TextStyle(
-                                fontSize: 12,
-                                // fontWeight: FontWeight.bold,
-                                color: Colors.black.withOpacity(0.6))),
-                      ],
-                    )
-                  ],
-                ),
-              ],
-            ),
-          );
-        });
+    return Container(
+      height: 200,
+      decoration: BoxDecoration(
+        color: Colors.white,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Features for you',
+                  style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.7))),
+              SizedBox(height: 10),
+              FeatureCard(),
+              SizedBox(height: 10),
+              ListView.builder(
+                  padding: const EdgeInsets.only(left: 35, top: 10),
+                  itemCount: 3,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (_, index) {
+                    return Container(
+                      height: 100,
+                      width: 100,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(features[index],
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black.withOpacity(0.5))),
+                          SizedBox(height: 5),
+                          Text(text[index],
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  // fontWeight: FontWeight.bold,
+                                  color: Colors.black.withOpacity(0.6))),
+                        ],
+                      ),
+                    );
+                  })
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
