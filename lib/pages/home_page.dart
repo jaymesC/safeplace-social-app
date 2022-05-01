@@ -124,6 +124,7 @@ class HomePage extends StatelessWidget {
 
     return Container(
       height: 200,
+      // width: 200,
       decoration: BoxDecoration(
         color: Colors.white,
       ),
@@ -139,38 +140,65 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.black.withOpacity(0.7))),
               SizedBox(height: 10),
-              FeatureCard(),
-              SizedBox(height: 10),
-              ListView.builder(
-                  padding: const EdgeInsets.only(left: 35, top: 10),
-                  itemCount: 3,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (_, index) {
-                    return Container(
-                      height: 100,
-                      width: 100,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(features[index],
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black.withOpacity(0.5))),
-                          SizedBox(height: 5),
-                          Text(text[index],
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  // fontWeight: FontWeight.bold,
-                                  color: Colors.black.withOpacity(0.6))),
-                        ],
-                      ),
-                    );
-                  })
             ],
           ),
+          // ListView.builder(
+          //     padding: const EdgeInsets.only(left: 35, top: 10),
+          //     itemCount: 3,
+          //     scrollDirection: Axis.horizontal,
+          //     itemBuilder: (_, index) {
+          //       return Container(
+          //         height: 100,
+          //         width: 100,
+          //         child: Column(
+          //           crossAxisAlignment: CrossAxisAlignment.start,
+          //           children: [
+          //             FeatureCard(),
+          //             Text(features[index],
+          //                 style: TextStyle(
+          //                     fontSize: 15,
+          //                     fontWeight: FontWeight.bold,
+          //                     color: Colors.black.withOpacity(0.5))),
+          //             SizedBox(height: 5),
+          //             Text(text[index],
+          //                 style: TextStyle(
+          //                     fontSize: 12,
+          //                     // fontWeight: FontWeight.bold,
+          //                     color: Colors.black.withOpacity(0.6))),
+          //           ],
+          //         ),
+          //       );
+          //     })
         ],
       ),
     );
+    // ListView.builder(
+    // padding: const EdgeInsets.only(left: 35, top: 10),
+    // itemCount: 3,
+    // scrollDirection: Axis.horizontal,
+    // itemBuilder: (_, index) {
+    //   return Container(
+    //     height: 100,
+    //     // width: 100,
+    //     child: Column(
+    //       crossAxisAlignment: CrossAxisAlignment.start,
+    //       children: [
+    // FeatureCard(),
+
+    //         Text(features[index],
+    //             style: TextStyle(
+    //                 fontSize: 15,
+    //                 fontWeight: FontWeight.bold,
+    //                 color: Colors.black.withOpacity(0.5))),
+    //         SizedBox(height: 5),
+    //         Text(text[index],
+    //             style: TextStyle(
+    //                 fontSize: 12,
+    //                 // fontWeight: FontWeight.bold,
+    //                 color: Colors.black.withOpacity(0.6))),
+    //       ],
+    //     ),
+    //   );
+    // });
   }
 }
