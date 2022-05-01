@@ -123,8 +123,9 @@ class HomePage extends StatelessWidget {
     ];
 
     return Container(
-      height: 200,
-      // width: 200,
+      // padding: const EdgeInsets.only(left: 35, top: 10),
+      // height: 200,
+      width: double.maxFinite,
       decoration: BoxDecoration(
         color: Colors.white,
       ),
@@ -139,7 +140,34 @@ class HomePage extends StatelessWidget {
                       fontSize: 17,
                       fontWeight: FontWeight.bold,
                       color: Colors.black.withOpacity(0.7))),
-              SizedBox(height: 10),
+              // SizedBox(height: 10),
+              Container(
+                height: 200,
+                width: double.maxFinite,
+                child: ListView.builder(
+                    padding: const EdgeInsets.only(left: 35, top: 6),
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (_, index) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          FeatureCard(),
+                          Text(features[index],
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black.withOpacity(0.5))),
+                          SizedBox(height: 5),
+                          Text(text[index],
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  // fontWeight: FontWeight.bold,
+                                  color: Colors.black.withOpacity(0.6))),
+                        ],
+                      );
+                    }),
+              )
             ],
           ),
           // ListView.builder(
