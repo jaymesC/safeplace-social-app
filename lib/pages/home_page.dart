@@ -3,6 +3,7 @@ import 'package:safeplace_app/widgets/emoji_widget.dart';
 import 'package:safeplace_app/widgets/feature_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:safeplace_app/widgets/large_card.dart';
+import 'package:safeplace_app/widgets/list_tab.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,12 +14,18 @@ class HomePage extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
+        backgroundColor: Colors.white,
         body: Container(
-      height: h,
-      child: Column(
-        children: [_headSection(), _featureSection(), _cardSection()],
-      ),
-    ));
+          height: h,
+          child: Column(
+            children: [
+              _headSection(),
+              _featureSection(),
+              _cardSection(),
+              _listTabSection()
+            ],
+          ),
+        ));
   }
 
   _headSection() {
@@ -189,7 +196,7 @@ class HomePage extends StatelessWidget {
                                     color: Colors.black.withOpacity(0.8))),
                             SizedBox(
                               width: 20,
-                            )
+                            ),
                           ],
                         ),
                       );
@@ -220,9 +227,14 @@ class HomePage extends StatelessWidget {
             heading: 'Positive Activities',
             description: 'Be open to positive exercises, dive into the new!',
             buttonText: 'Take a ride',
-          )
+          ),
+          
         ],
       ),
     );
+  }
+
+  _listTabSection() {
+    return ListTab();
   }
 }
