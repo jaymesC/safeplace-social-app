@@ -123,9 +123,14 @@ class HomePage extends StatelessWidget {
       'Listen to calm & soothen songs'
     ];
     final List<IconData> icons = <IconData>[
-      Icons.access_alarm_outlined,
+      Icons.access_time_rounded,
       Icons.access_alarm_outlined,
       Icons.account_balance_wallet_outlined,
+    ];
+    final List<Color> colors = <Color>[
+      Colors.blue,
+      Colors.yellow,
+      Colors.green,
     ];
 
     return Container(
@@ -170,6 +175,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             FeatureCard(
                               icon: icons[index],
+                              backgroundColor: colors[index],
                             ),
                             SizedBox(height: 10),
                             Text(features[index],
