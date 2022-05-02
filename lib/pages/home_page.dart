@@ -205,11 +205,12 @@ class HomePage extends StatelessWidget {
   _cardSection() {
     return Padding(
       padding: const EdgeInsets.only(
-        left: 25,
+        left: 15,
         top: 10,
       ),
       child: Row(
-        children: [LargeCard()],
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [LargeCard(), LargeCard()],
       ),
     );
   }
