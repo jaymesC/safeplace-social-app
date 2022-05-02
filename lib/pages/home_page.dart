@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:safeplace_app/widgets/emoji_widget.dart';
 import 'package:safeplace_app/widgets/feature_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:safeplace_app/widgets/large_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
         body: Container(
       height: h,
       child: Column(
-        children: [_headSection(), _featureSection()],
+        children: [_headSection(), _featureSection(), _cardSection()],
       ),
     ));
   }
@@ -32,8 +33,8 @@ class HomePage extends StatelessWidget {
     var feeling = ['Happy', 'Calm', 'Sad', 'Energetic', 'Anxious', 'Frisky'];
 
     return Container(
-      padding: const EdgeInsets.only(top: 50, left: 30),
-      height: 250,
+      padding: const EdgeInsets.only(top: 35, left: 30),
+      height: 210,
       decoration: BoxDecoration(
           color: Color.fromARGB(255, 67, 14, 182),
           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60))),
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: 5,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -78,7 +79,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Column(
                 children: [
@@ -128,14 +129,12 @@ class HomePage extends StatelessWidget {
       Icons.account_balance_wallet_outlined,
     ];
     final List<Color> colors = <Color>[
-      Colors.blue,
       Colors.yellow,
-      Colors.green,
+      Colors.red.withOpacity(0.8),
+      Color.fromARGB(255, 28, 109, 202),
     ];
 
     return Container(
-      // padding: const EdgeInsets.only(left: 35, top: 10),
-      // height: 200,
       width: double.maxFinite,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -146,7 +145,7 @@ class HomePage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.only(left: 25),
                 child: Text('Features for you',
@@ -155,7 +154,7 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.black.withOpacity(0.7))),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Container(
                 // margin: EdgeInsets.only(right: 20),
                 height: 100,
@@ -171,13 +170,12 @@ class HomePage extends StatelessWidget {
                         margin: const EdgeInsets.only(right: 20),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          // mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             FeatureCard(
                               icon: icons[index],
                               backgroundColor: colors[index],
                             ),
-                            SizedBox(height: 10),
+                            SizedBox(height: 5),
                             Text(features[index],
                                 style: TextStyle(
                                     fontSize: 15,
@@ -200,6 +198,18 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  _cardSection() {
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 25,
+        top: 10,
+      ),
+      child: Row(
+        children: [LargeCard()],
       ),
     );
   }
