@@ -217,9 +217,9 @@ class HomePage extends StatelessWidget {
             buttonText: 'Say Hello',
           ),
           LargeCard(
-            heading: 'Make a new friend',
-            description: 'No man is an island. Meet new people',
-            buttonText: 'Say Hello',
+            heading: 'Positive Activities',
+            description: 'Be open to positive exercises, dive into the new!',
+            buttonText: 'Take a ride',
           )
         ],
       ),

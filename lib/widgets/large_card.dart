@@ -13,9 +13,7 @@ class LargeCard extends StatelessWidget {
       required this.description,
       required this.buttonText,
       this.textColor = Colors.white,
-      this.boxColor = Colors.white
-      
-      })
+      this.boxColor = Colors.indigo})
       : super(key: key);
 
   @override
@@ -25,18 +23,17 @@ class LargeCard extends StatelessWidget {
       width: 170,
       height: 110,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 17, 17, 171),
-          borderRadius: BorderRadius.circular(15)),
+          color: boxColor, borderRadius: BorderRadius.circular(15)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(heading, style: TextStyle(fontSize: 16, color: textColor)),
-          SizedBox(height: 5),
+          SizedBox(height: 8),
           Text(description, style: TextStyle(fontSize: 12, color: textColor)),
           Container(
             width: 100,
             height: 25,
-            margin: const EdgeInsets.only(top: 10),
+            margin: const EdgeInsets.only(top: 13),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
