@@ -210,7 +210,18 @@ class HomePage extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [LargeCard(), LargeCard()],
+        children: [
+          LargeCard(
+            heading: 'Make a new friend',
+            description: 'No man is an island. Meet new people',
+            buttonText: 'Say Hello',
+          ),
+          LargeCard(
+            heading: 'Make a new friend',
+            description: 'No man is an island. Meet new people',
+            buttonText: 'Say Hello',
+          )
+        ],
       ),
     );
   }
