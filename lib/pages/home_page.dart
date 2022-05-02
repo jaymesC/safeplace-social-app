@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safeplace_app/widgets/emoji_widget.dart';
 import 'package:safeplace_app/widgets/feature_card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -121,6 +122,11 @@ class HomePage extends StatelessWidget {
       'Boost your mood with excercise',
       'Listen to calm & soothen songs'
     ];
+    final List<IconData> icons = <IconData>[
+      Icons.access_alarm_outlined,
+      Icons.access_alarm_outlined,
+      Icons.account_balance_wallet_outlined,
+    ];
 
     return Container(
       // padding: const EdgeInsets.only(left: 35, top: 10),
@@ -147,7 +153,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 // margin: EdgeInsets.only(right: 20),
-                height: 200,
+                height: 100,
                 width: 410,
                 child: ListView.builder(
                     padding: const EdgeInsets.only(
@@ -157,12 +163,14 @@ class HomePage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (_, index) {
                       return Container(
-                        margin: EdgeInsets.only(right: 20),
+                        margin: const EdgeInsets.only(right: 20),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           // mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            FeatureCard(),
+                            FeatureCard(
+                              icon: icons[index],
+                            ),
                             SizedBox(height: 10),
                             Text(features[index],
                                 style: TextStyle(
