@@ -143,7 +143,7 @@ class HomePage extends StatelessWidget {
               // SizedBox(height: 10),
               Container(
                 height: 200,
-                width: double.maxFinite,
+                width: 400,
                 child: ListView.builder(
                     padding: const EdgeInsets.only(left: 35, top: 6),
                     itemCount: 3,
