@@ -136,11 +136,14 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20),
-              Text('Features for you',
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black.withOpacity(0.7))),
+              Padding(
+                padding: const EdgeInsets.only(left: 25),
+                child: Text('Features for you',
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.7))),
+              ),
               SizedBox(height: 10),
               Container(
                 // margin: EdgeInsets.only(right: 20),
@@ -169,7 +172,7 @@ class HomePage extends StatelessWidget {
                             SizedBox(height: 5),
                             Text(text[index],
                                 style: TextStyle(
-                                    fontSize: 13,
+                                    fontSize: 11.3,
                                     // fontWeight: FontWeight.bold,
                                     color: Colors.black.withOpacity(0.8))),
                             SizedBox(
