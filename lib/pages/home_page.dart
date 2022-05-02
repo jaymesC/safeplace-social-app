@@ -21,12 +21,12 @@ class HomePage extends StatelessWidget {
 
   _headSection() {
     var list = [
-      '😎',
-      '😎',
-      '😎',
-      '😎',
-      '😎',
-      '😎',
+      '😀',
+      '😊',
+      '🙁',
+      '🥳',
+      '😮',
+      '😤',
     ];
     var feeling = ['Happy', 'Calm', 'Sad', 'Energetic', 'Anxious', 'Frisky'];
 
