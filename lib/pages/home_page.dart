@@ -228,13 +228,21 @@ class HomePage extends StatelessWidget {
             description: 'Be open to positive exercises, dive into the new!',
             buttonText: 'Take a ride',
           ),
-          
         ],
       ),
     );
   }
 
   _listTabSection() {
-    return ListTab();
+    return Container(
+      margin: const EdgeInsets.only(top: 15),
+      width: 330,
+      height: 60,
+      decoration: BoxDecoration(
+          color: Colors.red, borderRadius: BorderRadius.circular(20)),
+      child: Row(
+        children: [],
+      ),
+    );
   }
 }
