@@ -238,7 +238,7 @@ class HomePage extends StatelessWidget {
           itemCount: 4,
           itemBuilder: (_, index) {
             return Container(
-              margin: const EdgeInsets.only(top: 15, left: 15),
+              margin: const EdgeInsets.only(bottom: 15, left: 15),
               width: 300,
               height: 60,
               decoration: BoxDecoration(
