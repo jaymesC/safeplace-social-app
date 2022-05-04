@@ -211,10 +211,7 @@ class HomePage extends StatelessWidget {
 
   _cardSection() {
     return Padding(
-      padding: const EdgeInsets.only(
-        left: 15,
-        top: 10,
-      ),
+      padding: const EdgeInsets.only(left: 15, top: 10, bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -235,14 +232,22 @@ class HomePage extends StatelessWidget {
 
   _listTabSection() {
     return Container(
-      margin: const EdgeInsets.only(top: 15),
-      width: 330,
-      height: 60,
-      decoration: BoxDecoration(
-          color: Colors.red, borderRadius: BorderRadius.circular(20)),
-      child: Row(
-        children: [],
-      ),
+      height: 150,
+      width: 370,
+      child: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (_, index) {
+            return Container(
+              margin: const EdgeInsets.only(top: 15, left: 15),
+              width: 300,
+              height: 60,
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(20)),
+              child: Row(
+                children: [],
+              ),
+            );
+          }),
     );
   }
 }
