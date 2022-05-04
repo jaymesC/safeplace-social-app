@@ -237,16 +237,7 @@ class HomePage extends StatelessWidget {
       child: ListView.builder(
           itemCount: 4,
           itemBuilder: (_, index) {
-            return Container(
-              margin: const EdgeInsets.only(bottom: 15, left: 15),
-              width: 300,
-              height: 60,
-              decoration: BoxDecoration(
-                  color: Colors.red, borderRadius: BorderRadius.circular(20)),
-              child: Row(
-                children: [],
-              ),
-            );
+            return ListTab();
           }),
     );
   }

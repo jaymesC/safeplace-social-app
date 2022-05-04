@@ -6,8 +6,8 @@ class ListTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 10),
-      width: 370,
+      margin: const EdgeInsets.only(bottom: 15, left: 15),
+      width: 300,
       height: 60,
       decoration: BoxDecoration(
           color: Colors.red, borderRadius: BorderRadius.circular(20)),
