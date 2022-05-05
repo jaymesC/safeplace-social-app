@@ -231,20 +231,26 @@ class HomePage extends StatelessWidget {
   }
 
   _listTabSection() {
-     final List<String> images = <String>[
+    final List<String> images = <String>[
       'images/image1.PNG',
       'images/image2.PNG',
       'images/image3.PNG'
     ];
     final List<String> titles = <String>[
-      'Join and grow in a community',
-      'Boost your mood with excercise',
-      'Listen to calm & soothen songs'
+      "See a Therapist",
+      "No judgement",
+      "Listen to calm & soothen songs"
     ];
-    final List<String> text = <String>[
-      'Join and grow in a community',
-      'Boost your mood with excercise',
-      'Listen to calm & soothen songs'
+    final List<String> texts = <String>[
+      "Need an experienced mentor to talk to? We've got you covered for FREE!",
+      "Here no one is a judge, feel free to speak, join a community!",
+      "Your little dairy, Your new best friend"
+    ];
+
+    final List<Color> colors = <Color>[
+      Colors.yellow,
+      Colors.red.withOpacity(0.8),
+      Color.fromARGB(255, 28, 109, 202),
     ];
     return Container(
       height: 150,
@@ -255,6 +261,7 @@ class HomePage extends StatelessWidget {
             return ListTab(
               image: 'images/logo.png',
               title: 'over testing',
+              color: colors[index],
               text: 'testingggggggggggggggggggggggggggggggggggggg',
             );
           }),

@@ -4,9 +4,14 @@ class ListTab extends StatelessWidget {
   final String image;
   final String title;
   final String text;
+  final Color? color;
 
   const ListTab(
-      {Key? key, required this.image, required this.title, required this.text})
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.text,
+      required this.color})
       : super(key: key);
 
   @override
@@ -26,8 +31,8 @@ class ListTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 5),
-                Text(title),
+                SizedBox(height: 7),
+                Text(title, style: TextStyle(color: color)),
                 SizedBox(height: 5),
                 Text(text),
               ],
