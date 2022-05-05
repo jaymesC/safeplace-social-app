@@ -237,7 +237,11 @@ class HomePage extends StatelessWidget {
       child: ListView.builder(
           itemCount: 4,
           itemBuilder: (_, index) {
-            return ListTab();
+            return ListTab(
+              image: 'images/logo.png',
+              text: 'testingggggggggggggggggggggggggggggggggggggg',
+              title: 'over testing',
+            );
           }),
     );
   }

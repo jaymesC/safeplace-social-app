@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ListTab extends StatelessWidget {
-  const ListTab({Key? key}) : super(key: key);
+  final String image;
+  final String title;
+  final String text;
+
+  const ListTab(
+      {Key? key, required this.image, required this.title, required this.text})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +18,21 @@ class ListTab extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.red, borderRadius: BorderRadius.circular(20)),
       child: Row(
-        children: [],
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Image(image: AssetImage(image)),
+          Container(
+            width: 180,
+            child: Column(
+              children: [
+                SizedBox(height: 5),
+                Text(title),
+                SizedBox(height: 5),
+                Text(text),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
