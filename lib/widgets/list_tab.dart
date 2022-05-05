@@ -23,11 +23,11 @@ class ListTab extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.red, borderRadius: BorderRadius.circular(20)),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Image(image: AssetImage(image)),
           Container(
-            width: 180,
+            width: 250,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

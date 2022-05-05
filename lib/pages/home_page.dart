@@ -244,25 +244,25 @@ class HomePage extends StatelessWidget {
     final List<String> texts = <String>[
       "Need an experienced mentor to talk to? We've got you covered for FREE!",
       "Here no one is a judge, feel free to speak, join a community!",
-      "Your little dairy, Your new best friend"
+      "Your little dairy, Your new best friend, keep a record of your daily progress."
     ];
 
     final List<Color> colors = <Color>[
       Colors.yellow,
       Colors.red.withOpacity(0.8),
-      Color.fromARGB(255, 28, 109, 202),
+      Color.fromARGB(255, 27, 53, 99).withOpacity(0.8),
     ];
     return Container(
       height: 150,
       width: 370,
       child: ListView.builder(
-          itemCount: 4,
+          itemCount: 3,
           itemBuilder: (_, index) {
             return ListTab(
-              image: 'images/logo.png',
-              title: 'over testing',
+              image: images[index],
+              title: titles[index],
               color: colors[index],
-              text: 'testingggggggggggggggggggggggggggggggggggggg',
+              text: texts[index],
             );
           }),
     );
