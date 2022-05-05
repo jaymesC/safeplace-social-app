@@ -21,7 +21,8 @@ class ListTab extends StatelessWidget {
       width: 300,
       height: 70,
       decoration: BoxDecoration(
-          color: Colors.red, borderRadius: BorderRadius.circular(20)),
+          color: Color.fromARGB(255, 242, 243, 252),
+          borderRadius: BorderRadius.circular(20)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -32,9 +33,14 @@ class ListTab extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 7),
-                Text(title, style: TextStyle(color: color)),
+                Text(title,
+                    style: TextStyle(
+                        color: color,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold)),
                 SizedBox(height: 5),
-                Text(text),
+                Text(text,
+                    style: TextStyle(color: Colors.grey.withOpacity(0.9))),
               ],
             ),
           )

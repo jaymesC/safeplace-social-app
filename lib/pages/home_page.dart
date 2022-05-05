@@ -239,7 +239,7 @@ class HomePage extends StatelessWidget {
     final List<String> titles = <String>[
       "See a Therapist",
       "No judgement",
-      "Listen to calm & soothen songs"
+      "Mood Journal"
     ];
     final List<String> texts = <String>[
       "Need an experienced mentor to talk to? We've got you covered for FREE!",
@@ -248,12 +248,12 @@ class HomePage extends StatelessWidget {
     ];
 
     final List<Color> colors = <Color>[
-      Colors.yellow,
+      Color.fromARGB(255, 216, 202, 68),
       Colors.red.withOpacity(0.8),
       Color.fromARGB(255, 27, 53, 99).withOpacity(0.8),
     ];
     return Container(
-      height: 150,
+      height: double.infinity,
       width: 370,
       child: ListView.builder(
           itemCount: 3,
