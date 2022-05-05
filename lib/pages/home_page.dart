@@ -231,6 +231,21 @@ class HomePage extends StatelessWidget {
   }
 
   _listTabSection() {
+     final List<String> images = <String>[
+      'images/image1.PNG',
+      'images/image2.PNG',
+      'images/image3.PNG'
+    ];
+    final List<String> titles = <String>[
+      'Join and grow in a community',
+      'Boost your mood with excercise',
+      'Listen to calm & soothen songs'
+    ];
+    final List<String> text = <String>[
+      'Join and grow in a community',
+      'Boost your mood with excercise',
+      'Listen to calm & soothen songs'
+    ];
     return Container(
       height: 150,
       width: 370,
@@ -239,8 +254,8 @@ class HomePage extends StatelessWidget {
           itemBuilder: (_, index) {
             return ListTab(
               image: 'images/logo.png',
-              text: 'testingggggggggggggggggggggggggggggggggggggg',
               title: 'over testing',
+              text: 'testingggggggggggggggggggggggggggggggggggggg',
             );
           }),
     );

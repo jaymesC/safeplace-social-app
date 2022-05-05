@@ -14,7 +14,7 @@ class ListTab extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 15, left: 15),
       width: 300,
-      height: 60,
+      height: 70,
       decoration: BoxDecoration(
           color: Colors.red, borderRadius: BorderRadius.circular(20)),
       child: Row(
@@ -24,6 +24,7 @@ class ListTab extends StatelessWidget {
           Container(
             width: 180,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 5),
                 Text(title),
